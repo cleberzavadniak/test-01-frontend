@@ -1,0 +1,11 @@
+.autobahn-app {
+  padding: 15px;
+}
+
+.autobahn-app.connected {
+  border-top: 4px solid green;
+}
+
+.autobahn-app.disconnected {
+  border-top: 4px solid red;
+}

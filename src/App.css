@@ -1,0 +1,14 @@
+.app {
+  text-align: center;
+}
+
+form label {
+  text-align: left;
+  width: 60px;
+  padding-right: 15px;
+  display: inline-block;
+}
+
+.smooth {
+  color: #c0c0c0;
+}
