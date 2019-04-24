@@ -44,11 +44,10 @@ class SignUpForm extends React.Component {
 
     session.call('sign_up', [username, password]).then(function(response) {
       console.log(response);
-      var message = response.kwargs.message;
 
       that.setState({
-        confirmationToken: message.token,
-        userId: message.id,
+        confirmationToken: response.token,
+        userId: response.id,
         status: "",
         success: true
       });

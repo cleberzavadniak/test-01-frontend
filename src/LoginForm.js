@@ -36,11 +36,9 @@ class LoginForm extends React.Component {
 
     session.call('authenticate', [username, password]).then(function(response) {
       console.log(response);
-      var message = response.kwargs.message;
-
       that.setState({
         status: "Sucesso!",
-        status2: "Token: " + message.token,
+        status2: "Token: " + response.token,
       });
     }).catch(function(error) {
       console.log(error);
