@@ -53,7 +53,12 @@ class SignUpForm extends React.Component {
       });
     }).catch(function(error) {
       console.log(error);
-      that.setState({status: 'Error: ' + error.error});
+      if (error.args[0]) {
+        that.setState({status: 'Error: ' + error.args[0]});
+      }
+      else {
+        that.setState({status: 'Error: ' + error.error});
+      }
     });
   }
 
